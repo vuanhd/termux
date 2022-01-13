@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Venus Tab</title>
+    <link rel="stylesheet" type="text/css" href="../css/new/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/new/new_tab.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/new/weather.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/new/additional.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+
+    <style>
+        .box {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content-main">
+    <div class="container_flex">
+        <div>
+            <div class="inline_block_holder inline_block_content" style="padding: 50px">
+                <div class="box">
+                    <img id="button_select_next" src="../images/app/globe-venus-tab.png">
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <div id="weather_holder" style="padding-top: 20px">
+                <div class="widgets-holder">
+                    <div class="column">
+                        <div class="widget weather-widget" id="main">
+                        <span class="geo">
+                            <span id="weather_widget__city"></span>
+                        </span>
+                            <div class="top-line"></div>
+                            <div class="widget-body" style="float: right; margin-right:30px">
+                                <div class="temp-holder" style="">
+                                            <div class="inline_block_holder inline_block_content ">
+                                                <div class="box">
+                                                    <span class="temp"><span id="weather_widget__temp_sign">+</span><span
+                                                            id="weather_widget__temp"></span>&deg;</span>
+                                                                                <span class="units">
+                                                                                <span class="active">C</span>
+                                                                                </span>
+                                                            <i class="wi weather-icon_48px weather-icon_ weather-icon_10d weather-icon_500"></i>
+                                                </div>
+                                         </div>
+                                            <div class="inline_block_holder inline_block_content" style="">
+                                                <div class="box">
+                                                    <div class="detail-info__city" style=""></div>
+                                                    <img src="../images/app/location-venus-tab.png" style="width: 30px;" />
+                                                </div>
+                                         </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="flex-container">
+            <div id="logo-and-shrink" class="row">
+                <div class="flex-item logo-wrapper">
+                    <div style="text-align: center">
+                        <img class="logo-img" src="../images/app/logo-venus-tab.png">
+                    </div>
+
+                    <div id="shrinkId" class="shrink-div">
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="clock-and-search" class="row">
+                <div class="flex-item">
+                    <div id="uiBlur" class="bgImage"></div>
+                    <div id="clock_holder">
+                        <div id="clock">
+                            <p class="unit" id="hours"></p><span style="font-size:100px; color:#fff; margin-bottom: 17px;">:</span>
+                            <p class="unit" id="minutes"></p>
+                            <span style="margin-left: 20px">
+                             <p class="unit" id="ampm"></p>
+                        </span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div id="search_input_holder">
+                        <div id="search-wrapper" style="width: 100%">
+                            <div class="input-group input-row" style="position: relative; margin-top: 20px;">
+                                <input id="suggest_type" value="" dir="ltr" tabindex="-1" spellcheck="false"
+                                       autocomplete="off" readonly=""
+                                       style=""
+                                       class="form-control input-search  search-bar" type="text">
+                                <input placeholder="" id="SearchBar" class="form-control input-search search-bar" value=""
+                                       dir="auto" spellcheck="false" autocomplete="off" type="text">
+                                <input placeholder="search here" id="SearchBar2"
+                                       class="form-control input-search  search-bar search-bar-main" value="" dir="auto"
+                                       spellcheck="false"
+                                       autocomplete="off" type="text">
+                                <img id="img-right-button" class="img-left-button" src="../images/app/search-venus-tab.png"
+                                     alt=img>
+                            </div>
+                            <div id="old_value" data-val="" data-index="0" class="suggest_div" style="display: none"></div>
+                            <div class="">
+                                <div id="suggest" class="suggest"
+                                     style="display: none; background-color: transparent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container_flex">
+        <div></div>
+    </div>
+
+    <div id="options" class="is_not_selected" style="">
+        <div id="options_content">
+            <span class="option_settings">Settings</span>
+            <p style="margin-top: 10px">
+                <span class="option_title">Clock</span>
+
+                <label class="switch" style="float: right">
+                    <input id="clock_option_select" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+
+            </p>
+            <p style="margin-top: 6px">
+                <span class="option_title">Weather & location</span>
+
+                <label class="switch" style="float: right">
+                    <input id="weather_location_option_select" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+
+            </p>
+            <p style="margin-top: 6px">
+                <span class="option_title">Search Bar</span>
+                <label class="switch" style="float: right">
+                    <input id="search_bar_option_select" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+
+            </p>
+            <p style="margin-top: 6px">
+                <span class="option_title">Change wallpaper</span>
+            </p>
+            <div class="wallpapers" style="margin-top: 6px">
+                    <img src="../images/background/background_0.png" id="../images/background/background_0.png" class="image_option images_first_row" data-index="0" alt="img">
+                    <img src="../images/background/background_1.png" id="../images/background/background_1.png" class="image_option images_first_row" data-index="1" alt="img">
+                    <img src="../images/background/background_2.png" id="../images/background/background_2.png" class="image_option images_first_row" data-index="2" alt="img">
+                    <img src="../images/background/background_3.png" id="../images/background/background_3.png" class="image_option images_first_row" data-index="3" alt="img">
+                    <img src="../images/background/background_4.jpg" id="../images/background/background_4.jpg" class="image_option images_first_row" data-index="4" alt="img">
+                    <img src="../images/background/background_5.jpg" id="../images/background/background_5.jpg" class="image_option" data-index="5" alt="img">
+                    <img src="../images/background/background_6.jpg" id="../images/background/background_6.jpg" class="image_option" data-index="6" alt="img">
+                    <img src="../images/background/background_7.jpg" id="../images/background/background_7.jpg" class="image_option" data-index="7" alt="img">
+                    <img src="../images/background/background_8.jpg" id="../images/background/background_8.jpg" class="image_option" data-index="8" alt="img">
+                    <img src="../images/background/background_9.jpg" id="../images/background/background_9.jpg" class="image_option" data-index="9" alt="img">
+                    
+            </div>
+        </div>
+    </div>
+
+
+    <div id="back-options" class="is_not_selected" >
+        <div id="options_content_notif">
+            <span class="option_settings">Motivational Quotes</span>
+            <label class="switch" style="float: right">
+                <input id="notification_show_checkbox" type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+            <p style="margin-top: 6px">
+                The goal of motivational quotes is to help you make the first steps toward a more driven, focused, inspired life. 
+                Use our friendly reminder to build your daily habit and start discovering what works for you.
+            </p>
+            <p style="margin-top: 6px">
+                <span class="option_title">Remind me every</span>
+                <input id="number_input" class="number_input" type="number" value="1" min="1" max="999" > <span class="text-style"> minutes</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="reminder">
+        <div>
+            <i class="fas fa-bell" style="font-size: 34px;  color: #D95354;"></i>
+            <span id="notification_heading" style="color: #fff">NOTIFICATION</span>
+        </div>
+        <div>
+            <p id="reminder-note" style="color: #fff"></p>
+        </div>
+    </div>
+    <div class="todo-wrapper">
+        <div class="text-and-icons-under-list-wrapper">
+            <div class="icons-under-list-wrapper">
+                <img id="chair-btn" class="icon-under-list" src="../images/back/motivation_icon.png" alt="Motivation icon" style="color: #fff;"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container_flex_footer">
+        <div id="settings_button_container">
+            <img id="settings_button" src="../images/app/settings-venus-tab.png">
+            <div id="full_screen_container" class="is_selected_inline">
+                <img id="full_screen_button" class="button_2" src="../images/app/full-screen-venus-tab.png">
+            </div>
+            <div id="exit_full_screen_container" class="is_not_selected_inline">
+                
+                <img id="exit_full_screen_button" class="button_2" src="../images/app/exit-full-screen-venus-tab.png">
+            </div>
+        </div>
+        
+        <div>
+            <div style="display: none">
+                <img style="width:70px;" src="../images/64.png">
+                <img src="../images/data/todo.png" id="todo-img" style="width:20px;">
+                <button class="topcorner todo-button" id="todo-button" style="margin-right:44px;top:10px;">ToDo</button>
+            </div>
+
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="../lib/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../lib/clock.js"></script>
+<script type="text/javascript" src="../lib/index.js"></script>
+<script type="text/javascript" src="../lib/reminder.js"></script>
+</html>
