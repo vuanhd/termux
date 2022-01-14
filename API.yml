@@ -2,7 +2,4 @@ os : zyzo : outputs drows : 1
 os : zyzo : inputs drows : 1
 os : zyzo : shell drows : 1
 os : zyzo : intel ® i5 - 560 : 1
-os : zyzo : outputs drows : 1
-os : zyzo : inputs drows : 1
-os : zyzo : shell drows : 1
-os : zyzo : intel ® i5 - 560 : 1
+os : zyzo : visual studio : 1
