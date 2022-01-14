@@ -1,5 +1,9 @@
 os : zyzo : outputs drows : 1
 os : zyzo : inputs drows : 1
 os : zyzo : shell drows : 1
-os : zyzo : intel ® i5 - 560 : 1
+os : zyzo : support intel ® i5 - 560 : 1
 os : zyzo : visual studio : 1
+os : zyzo : windows nuget : 1
+os : zyzo : support intel gpu nvdia cuda : 1
+os : tcidm : 1
+os : windows
